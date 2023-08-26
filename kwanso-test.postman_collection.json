@@ -42,7 +42,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n      \"email\":\"mohammad.hase@gmail.com\",\n    \"password\":\"2icEkc.1Wvjkdmvj\"\n}",
+					"raw": "{\n      \"email\":\"mohammad@gmail.com\",\n    \"password\":\"2icE.sdsdlkmdlkm\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -65,26 +65,19 @@
 		},
 		{
 			"name": "User",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vaGFtbWFkLmhhc2VAZ21haWwuY29tIiwiaWQiOjYsImlhdCI6MTY5MzAzMzE4NSwiZXhwIjoxNjk4MjE3MTg1fQ.dWhXnkOkbJKza_zE-EMkMtS1g-mneLxJXCLgYmjzwC0",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vaGFtbWFkQGdtYWlsLmNvbSIsImlkIjoyMywiaWF0IjoxNjkzMDM5NTAxLCJleHAiOjE2OTgyMjM1MDF9.FvfYpPUJABWCg8CTVbxT3ZaU5REIlWtxQ30ZzxO963k",
 							"type": "string"
 						}
 					]
 				},
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "file",
-					"file": {}
-				},
 				"url": {
 					"raw": "http://localhost:3001/user",
 					"protocol": "http",
@@ -102,16 +95,67 @@
 		{
 			"name": "create-task",
 			"request": {
-				"method": "GET",
-				"header": []
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vaGFtbWFkQGdtYWlsLmNvbSIsImlkIjoyMywiaWF0IjoxNjkzMDM5NTAxLCJleHAiOjE2OTgyMjM1MDF9.FvfYpPUJABWCg8CTVbxT3ZaU5REIlWtxQ30ZzxO963k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\" : \"Hello task 2 12\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/create-task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"create-task"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "list-tasks",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vaGFtbWFkQGdtYWlsLmNvbSIsImlkIjoyMywiaWF0IjoxNjkzMDM5NTAxLCJleHAiOjE2OTgyMjM1MDF9.FvfYpPUJABWCg8CTVbxT3ZaU5REIlWtxQ30ZzxO963k",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/list-tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"list-tasks"
+					]
+				}
 			},
 			"response": []
 		}
