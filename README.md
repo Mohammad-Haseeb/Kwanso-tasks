@@ -4,4 +4,7 @@ The architecture follows the SOLID principles, which has led to the decision not
 
 ### The kwanso-test.postman_collection.json file contains the available Postman API collection for your reference.
 ## To initiate the tests, Run  the command  within the terminal.
-```npm run test:e2e ```
+```
+npm i
+npm run test:e2e
+```
